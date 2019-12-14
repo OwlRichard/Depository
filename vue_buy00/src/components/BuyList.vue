@@ -24,8 +24,8 @@
         </tr>
         <tr>
             <td></td>
-            <td>{{isActiveCourse}}/{{allCourseNum}}</td>
-            <td>{{allPrice}}</td>
+            <td colspan="2">{{isActiveCourse}}/{{allCourseNum}}</td>
+            <td colspan="2">{{allPrice}}</td>
         </tr>
     </table>
   </div>
