@@ -7,7 +7,7 @@ import Test from '@/components/Test'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history', // 访问路径中没有#
+  mode: 'history', // 访问路径中没有# 需要服务器端配置渲染ssr ，有利于seo，访问更快。
   routes: [
     // {
     //   path: '/',
