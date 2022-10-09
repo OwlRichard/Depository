@@ -1,0 +1,5 @@
+安装TypeScript
+npm install -g typescript
+
+tsc script.ts  // 编译为同名js文件
+tsc --outFile ./js/script.js script.ts  在当前目录，新建js文件夹，编辑成指定名称的js文件。
