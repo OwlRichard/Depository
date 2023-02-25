@@ -1,0 +1,46 @@
+const rl = require("readline").createInterface({ input: process.stdin });
+var iter = rl[Symbol.asyncIterator]();
+const readline = async () => (await iter.next()).value;
+
+const readyArr = [];
+
+void async function () {
+    // Write your code here
+    while(line = await readline()){
+        readyArr.push(line);
+        if(readyArr.length === 2){
+            const iptStr = readyArr[0].toLowerCase();
+            const target = readyArr[1].toLowerCase();
+            let count = 0;
+            for(let i = 0;i<iptStr.length;i++){
+                if(iptStr[i]===target){
+                    count++;
+                }
+            }
+            console.log(count);
+        }
+    }
+}()
+
+
+方法2
+const readline = require("readline") 
+
+const r1 = readline.createInterface({
+   input: process.stdin,
+   output: process.stdout
+})
+let arr = []
+r1.on("line", (input) => {
+   arr.push(input.trim())
+   if (arr.length === 2) {
+       var lines = arr[0].match(new RegExp('['+arr[1]+']','gi'))
+       
+       if (lines) {
+           console.log(lines.length) 
+       }else{
+            console.log(0) 
+       }
+       arr = []
+   }   
+})
